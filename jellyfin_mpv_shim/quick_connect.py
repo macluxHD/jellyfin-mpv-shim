@@ -7,12 +7,13 @@ import requests
 
 LOG = logging.getLogger("JELLYFIN." + __name__)
 
+
 def quick_connect(conn_mgr, server_url, callback):
     if not server_url:
         raise AttributeError("server url cannot be empty")
 
     # Check if quick connect is enabled before starting the process
-    if (not _quick_connect_enabled(conn_mgr.API, server_url, conn_mgr.session)):
+    if not _quick_connect_enabled(conn_mgr.API, server_url, conn_mgr.session):
         LOG.warning("Quick connect is not enabled for %s" % (server_url))
         return {}
 
@@ -44,6 +45,7 @@ def quick_connect(conn_mgr, server_url, callback):
     thread.start()
 
     return pin
+
 
 def _initiate_quick_connect(granular_api, server_url, session=None):
     path = "QuickConnect/Initiate"
@@ -78,15 +80,14 @@ def _initiate_quick_connect(granular_api, server_url, session=None):
 
     return {}
 
+
 def _quick_connect_enabled(granular_api, server_url, session=None):
     path = "QuickConnect/Enabled"
     headers = granular_api.get_default_headers()
     headers.update({"Content-type": "application/json"})
 
     try:
-        LOG.info(
-            "Checking if quick connect is enabled for %s/%s" % (server_url, path)
-        )
+        LOG.info("Checking if quick connect is enabled for %s/%s" % (server_url, path))
         response = granular_api.send_request(
             server_url,
             path,
@@ -111,6 +112,7 @@ def _quick_connect_enabled(granular_api, server_url, session=None):
         LOG.error(e)
 
     return {}
+
 
 def _poll_quick_connect(conn_mgr, server_url, callback, secret):
     tries = 30
@@ -169,6 +171,7 @@ def _poll_quick_connect(conn_mgr, server_url, callback, secret):
 
     callback(data)
 
+
 def _quick_connect_login(granular_api, server_url, secret, session=None):
     path = "Users/AuthenticateWithQuickConnect"
     authData = {"secret": secret}
@@ -204,9 +207,8 @@ def _quick_connect_login(granular_api, server_url, secret, session=None):
 
     return {}
 
-def _check_quick_connect_status(
-    granular_api, server_url, secret, session=None
-):
+
+def _check_quick_connect_status(granular_api, server_url, secret, session=None):
     path = "QuickConnect/Connect"
     authData = {"secret": secret}
 
@@ -237,12 +239,11 @@ def _check_quick_connect_status(
             LOG.debug(headers)
 
             return {}
-    except (
-        Exception
-    ) as e:  # Find exceptions for likely cases i.e, server timeout, etc
+    except Exception as e:  # Find exceptions for likely cases i.e, server timeout, etc
         LOG.error(e)
 
     return {}
+
 
 def _send_request(
     granular_api,

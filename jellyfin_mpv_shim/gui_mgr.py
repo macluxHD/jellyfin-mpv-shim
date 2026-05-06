@@ -208,13 +208,14 @@ class PreferencesWindow(threading.Thread):
                 self.handle("upd", clientManager.credentials)
             elif action == "quick_connect":
                 try:
+
                     def on_auth_complete(success):
                         if success:
                             self.handle("quick_connect_success")
                             self.handle("upd", clientManager.credentials)
                         else:
                             self.handle("quick_connect_error")
-                    
+
                     pin = clientManager.quick_connect(*param, callback=on_auth_complete)
                     if pin:
                         self.handle("quick_connect_code", pin)
@@ -275,8 +276,12 @@ class PreferencesWindowProcess(Process):
                     )
                     self.add_button.config(state=self.tk.NORMAL)
                 elif action == "quick_connect_code":
-                    self.quick_connect_label.grid(column=1, row=4, sticky=self.tk.E, pady=(10, 5))
-                    self.code_display.grid(column=2, row=4, sticky=self.tk.W, pady=(10, 5), padx=(0, 5))
+                    self.quick_connect_label.grid(
+                        column=1, row=4, sticky=self.tk.E, pady=(10, 5)
+                    )
+                    self.code_display.grid(
+                        column=2, row=4, sticky=self.tk.W, pady=(10, 5), padx=(0, 5)
+                    )
                     self.auth_code.set(param)
                     self.quick_connect_button.config(state=self.tk.NORMAL)
                 elif action == "quick_connect_success":
@@ -286,7 +291,9 @@ class PreferencesWindowProcess(Process):
                 elif action == "quick_connect_error":
                     self.messagebox.showerror(
                         _("Quick Connect"),
-                        _("Could not initiate quick connect.\nPlease check your connection information."),
+                        _(
+                            "Could not initiate quick connect.\nPlease check your connection information."
+                        ),
                     )
                     self.auth_code.set("")
                     self.quick_connect_label.grid_remove()
@@ -368,7 +375,9 @@ class PreferencesWindowProcess(Process):
         self.auth_code = tk.StringVar(value="")
         quick_connect_label = ttk.Label(c, text=_("Quick Connect:"))
         self.quick_connect_label = quick_connect_label
-        self.code_display = ttk.Label(c, textvariable=self.auth_code, font=("monospace", 10, "bold"))
+        self.code_display = ttk.Label(
+            c, textvariable=self.auth_code, font=("monospace", 10, "bold")
+        )
 
         def add_server():
             self.add_button.config(state=tk.DISABLED)
@@ -392,10 +401,12 @@ class PreferencesWindowProcess(Process):
 
         self.add_button = ttk.Button(c, text=_("Add Server"), command=add_server)
         self.add_button.grid(column=2, row=3, pady=5, sticky=tk.E)
-        
-        self.quick_connect_button = ttk.Button(c, text=_("Quick Connect"), command=quick_connect)
+
+        self.quick_connect_button = ttk.Button(
+            c, text=_("Quick Connect"), command=quick_connect
+        )
         self.quick_connect_button.grid(column=2, row=4, sticky=tk.E, pady=(10, 5))
-        
+
         self.remove_button = ttk.Button(
             c, text=_("Remove Server"), command=remove_server
         )

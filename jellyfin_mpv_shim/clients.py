@@ -125,6 +125,7 @@ class ClientManager(object):
     @staticmethod
     def _get_cli_credential_args():
         from .args import get_args
+
         a = get_args()
         if a.server and a.username:
             return a.server, a.username, a.password
@@ -160,6 +161,7 @@ class ClientManager(object):
 
     def cli_connect(self):
         from .args import get_args
+
         cli_commands = set(get_args().command or [])
 
         is_logged_in = self.try_connect()
@@ -343,7 +345,7 @@ class ClientManager(object):
             self.save_credentials()
             return True
         return False
-    
+
     def quick_connect(
         self, server: str, callback: callable, force_unique: bool = False
     ):
@@ -364,13 +366,19 @@ class ClientManager(object):
             port = ":8096"
 
         server = "".join(filter(bool, (protocol, ipv6_host, ipv4_host, port, path)))
-        
+
         client = self.client_factory()
         client.auth.connect_to_address(server)
-        
-        pin = quick_connect(client.auth, server, lambda result: callback(self._quick_connect_resolve(result, client, force_unique)))
+
+        pin = quick_connect(
+            client.auth,
+            server,
+            lambda result: callback(
+                self._quick_connect_resolve(result, client, force_unique)
+            ),
+        )
         return pin
-    
+
     def _quick_connect_resolve(self, result, client, force_unique):
         if "AccessToken" in result:
             credentials = client.auth.credentials.get_credentials()
@@ -379,7 +387,7 @@ class ClientManager(object):
                 server["uuid"] = server["Id"]
             else:
                 server["uuid"] = str(uuid.uuid4())
-            server["username"] = result['User']['Name']
+            server["username"] = result["User"]["Name"]
             if force_unique and server["Id"] in self.clients:
                 return True
             self.connect_client(server)
@@ -387,8 +395,7 @@ class ClientManager(object):
             self.save_credentials()
             return True
         return False
-        
-    
+
     def validate_client(self, client: "JellyfinClient", dry_run=False):
         # Use the apiclient's lower-level _http to bound retries and timeout
         # for this specific call. The default 30s × 5 retries can wedge the
@@ -400,7 +407,10 @@ class ClientManager(object):
                 "GET", "Sessions", {"params": None, "timeout": 10, "retry": 1}
             )
         except Exception:
-            log.warning("Health check session query failed; treating as disconnected.", exc_info=True)
+            log.warning(
+                "Health check session query failed; treating as disconnected.",
+                exc_info=True,
+            )
             client_list = []
 
         if client_list is None:
