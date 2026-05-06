@@ -206,6 +206,23 @@ class PreferencesWindow(threading.Thread):
             elif action == "remove":
                 clientManager.remove_client(param)
                 self.handle("upd", clientManager.credentials)
+            elif action == "quick_connect":
+                try:
+                    def on_auth_complete(success):
+                        if success:
+                            self.handle("quick_connect_success")
+                            self.handle("upd", clientManager.credentials)
+                        else:
+                            self.handle("quick_connect_error")
+                    
+                    pin = clientManager.quick_connect(*param, callback=on_auth_complete)
+                    if pin:
+                        self.handle("quick_connect_code", pin)
+                    else:
+                        self.handle("quick_connect_error")
+                except Exception:
+                    log.error("Error while initiating quick connect.", exc_info=True)
+                    self.handle("quick_connect_error")
 
     def handle(self, action: str, params=None):
         self.queue.put((action, params))
@@ -257,6 +274,24 @@ class PreferencesWindowProcess(Process):
                         ),
                     )
                     self.add_button.config(state=self.tk.NORMAL)
+                elif action == "quick_connect_code":
+                    self.quick_connect_label.grid(column=1, row=4, sticky=self.tk.E, pady=(10, 5))
+                    self.code_display.grid(column=2, row=4, sticky=self.tk.W, pady=(10, 5), padx=(0, 5))
+                    self.auth_code.set(param)
+                    self.quick_connect_button.config(state=self.tk.NORMAL)
+                elif action == "quick_connect_success":
+                    self.auth_code.set("")
+                    self.quick_connect_label.grid_remove()
+                    self.code_display.grid_remove()
+                elif action == "quick_connect_error":
+                    self.messagebox.showerror(
+                        _("Quick Connect"),
+                        _("Could not initiate quick connect.\nPlease check your connection information."),
+                    )
+                    self.auth_code.set("")
+                    self.quick_connect_label.grid_remove()
+                    self.code_display.grid_remove()
+                    self.quick_connect_button.config(state=self.tk.NORMAL)
                 elif action == "die":
                     self.root.destroy()
                     self.root.quit()
@@ -330,6 +365,11 @@ class PreferencesWindowProcess(Process):
         password_box = ttk.Entry(c, textvariable=self.password, show="*")
         password_box.grid(column=2, row=2)
 
+        self.auth_code = tk.StringVar(value="")
+        quick_connect_label = ttk.Label(c, text=_("Quick Connect:"))
+        self.quick_connect_label = quick_connect_label
+        self.code_display = ttk.Label(c, textvariable=self.auth_code, font=("monospace", 10, "bold"))
+
         def add_server():
             self.add_button.config(state=tk.DISABLED)
             self.r_queue.put(
@@ -343,17 +383,25 @@ class PreferencesWindowProcess(Process):
             self.remove_button.config(state=tk.DISABLED)
             self.r_queue.put(("remove", self.current_uuid))
 
+        def quick_connect():
+            self.quick_connect_button.config(state=tk.DISABLED)
+            self.r_queue.put(("quick_connect", (self.servername.get(),)))
+
         def close():
             self.r_queue.put(("die", None))
 
         self.add_button = ttk.Button(c, text=_("Add Server"), command=add_server)
         self.add_button.grid(column=2, row=3, pady=5, sticky=tk.E)
+        
+        self.quick_connect_button = ttk.Button(c, text=_("Quick Connect"), command=quick_connect)
+        self.quick_connect_button.grid(column=2, row=4, sticky=tk.E, pady=(10, 5))
+        
         self.remove_button = ttk.Button(
             c, text=_("Remove Server"), command=remove_server
         )
-        self.remove_button.grid(column=1, row=4, padx=5, pady=10, sticky=(tk.E, tk.S))
+        self.remove_button.grid(column=1, row=5, padx=5, pady=10, sticky=(tk.E, tk.S))
         close_button = ttk.Button(c, text=_("Close"), command=close)
-        close_button.grid(column=2, row=4, pady=10, sticky=(tk.E, tk.S))
+        close_button.grid(column=2, row=5, pady=10, sticky=(tk.E, tk.S))
 
         serverlist.bind("<<ListboxSelect>>", server_select)
         self.update()

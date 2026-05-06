@@ -5,6 +5,7 @@ from . import conffile
 from getpass import getpass
 from .constants import CAPABILITIES, CLIENT_VERSION, USER_APP_NAME, USER_AGENT, APP_NAME
 from .i18n import _
+from .quick_connect import quick_connect
 
 import os.path
 import json
@@ -342,7 +343,52 @@ class ClientManager(object):
             self.save_credentials()
             return True
         return False
+    
+    def quick_connect(
+        self, server: str, callback: callable, force_unique: bool = False
+    ):
+        if server.endswith("/"):
+            server = server[:-1]
 
+        protocol, ipv6_host, ipv4_host, port, path = path_regex.match(server).groups()
+
+        if not protocol:
+            log.warning("Adding http:// because it was not provided.")
+            protocol = "http://"
+
+        if protocol == "http://" and not port:
+            log.warning("Adding port 8096 for insecure local http connection.")
+            log.warning(
+                "If you want to connect to standard http port 80, use :80 in the url."
+            )
+            port = ":8096"
+
+        server = "".join(filter(bool, (protocol, ipv6_host, ipv4_host, port, path)))
+        
+        client = self.client_factory()
+        client.auth.connect_to_address(server)
+        
+        pin = quick_connect(client.auth, server, lambda result: callback(self._quick_connect_resolve(result, client, force_unique)))
+        return pin
+    
+    def _quick_connect_resolve(self, result, client, force_unique):
+        if "AccessToken" in result:
+            credentials = client.auth.credentials.get_credentials()
+            server = credentials["Servers"][0]
+            if force_unique:
+                server["uuid"] = server["Id"]
+            else:
+                server["uuid"] = str(uuid.uuid4())
+            server["username"] = result['User']['Name']
+            if force_unique and server["Id"] in self.clients:
+                return True
+            self.connect_client(server)
+            self.credentials.append(server)
+            self.save_credentials()
+            return True
+        return False
+        
+    
     def validate_client(self, client: "JellyfinClient", dry_run=False):
         # Use the apiclient's lower-level _http to bound retries and timeout
         # for this specific call. The default 30s × 5 retries can wedge the
