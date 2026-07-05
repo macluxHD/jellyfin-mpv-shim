@@ -6,25 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2024-06-05 13:54-0400\n"
-"PO-Revision-Date: 2025-10-04 03:51+0000\n"
+"PO-Revision-Date: 2026-05-23 07:46+0000\n"
 "Last-Translator: Klomer <florent.grouin+jellyfin@gmail.com>\n"
 "Language-Team: Breton <https://translate.jellyfin.org/projects/jellyfin/"
-"jellyfin-desktop/br/>\n"
+"jellyfin-mpv-shim/br/>\n"
 "Language: br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=(n % 10 == 1 && n % 100 != 11 && n % 100 != "
 "71 && n % 100 != 91) ? 0 : ((n % 10 == 2 && n % 100 != 12 && n % 100 != 72 "
-"&& n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && ("
-"n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 "
+"&& n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && "
+"(n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 "
 "< 90 || n % 100 > 99)) ? 2 : ((n != 0 && n % 1000000 == 0) ? 3 : 4)));\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.15.1\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:29
 msgid "Selecting Tracks..."
-msgstr ""
+msgstr "O choaz an tonioù..."
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:105
 msgid "{0}: No Subtitles"
@@ -36,19 +36,19 @@ msgstr "{0}: C'whitet"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:146
 msgid "Set Subbed: {0} ok, {1} fail"
-msgstr ""
+msgstr "Lakaat Istitloù : {0} mat eo, {1} c'hwitet"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:151
 msgid "Set Dubbed: {0} ok, {1} audio only, {2} fail"
-msgstr ""
+msgstr "Lakaat an Advouezhiañ : {0} mat eo, {1} aodio hepken, {2} c'hwitet"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:158
 msgid "Manual: {0} ok, {1} fail"
-msgstr ""
+msgstr "Dre zorn : {0} mat eo, {1} c'hwitet"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:163
 msgid "Setting Current..."
-msgstr ""
+msgstr "Arventennoù bremanel..."
 
 #: jellyfin_mpv_shim/clients.py:75
 msgid "Server URL: "
@@ -64,73 +64,75 @@ msgstr "Ger-tremen : "
 
 #: jellyfin_mpv_shim/clients.py:82
 msgid "Successfully added server."
-msgstr ""
+msgstr "Servijer ouzhpennet gant berzh."
 
 #: jellyfin_mpv_shim/clients.py:83
 msgid "Add another server?"
-msgstr ""
+msgstr "Ouzhpennañ ur servijer all ?"
 
 #: jellyfin_mpv_shim/clients.py:86
 msgid "Adding server failed."
-msgstr ""
+msgstr "C'hwitadenn war ouzhpennañ ur servijer."
 
 #: jellyfin_mpv_shim/display_mirror/__init__.py:116
 msgid "Ready to cast"
-msgstr ""
+msgstr "Prest da skignañ"
 
 #: jellyfin_mpv_shim/display_mirror/__init__.py:118
 msgid "Select your media in Jellyfin and play it here"
-msgstr ""
+msgstr "Choazit ho media e-barzh Jellyfin ha lennit anezhañ amañ"
 
 #: jellyfin_mpv_shim/gui_mgr.py:153
 msgid "Application Log"
-msgstr ""
+msgstr "Marilhoù an Arload"
 
 #: jellyfin_mpv_shim/gui_mgr.py:245 jellyfin_mpv_shim/gui_mgr.py:335
 msgid "Add Server"
-msgstr ""
+msgstr "Ouzhpennañ ur Servijer"
 
 #: jellyfin_mpv_shim/gui_mgr.py:246
 msgid ""
 "Could not add server.\n"
 "Please check your connection information."
 msgstr ""
+"Ouzhpennañ ar servijer dibosupl.\n"
+"Trugarez da wiriañ titouroù ar c'hennask."
 
 #: jellyfin_mpv_shim/gui_mgr.py:267
 msgid "Fail"
-msgstr ""
+msgstr "C'hwitadenn"
 
 #: jellyfin_mpv_shim/gui_mgr.py:267
 msgid "Ok"
-msgstr ""
+msgstr "Mat eo"
 
 #: jellyfin_mpv_shim/gui_mgr.py:280
 msgid "Server Configuration"
-msgstr ""
+msgstr "Kefluniadur ar servijer"
 
 #: jellyfin_mpv_shim/gui_mgr.py:303
 msgid "Server:"
-msgstr ""
+msgstr "Servijer :"
 
 #: jellyfin_mpv_shim/gui_mgr.py:308
 msgid "Username:"
-msgstr ""
+msgstr "Anv implijer :"
 
 #: jellyfin_mpv_shim/gui_mgr.py:313
 msgid "Password:"
-msgstr ""
+msgstr "Ger tremen :"
 
 #: jellyfin_mpv_shim/gui_mgr.py:338
 msgid "Remove Server"
-msgstr ""
+msgstr "Dilemel ar Servijer"
 
 #: jellyfin_mpv_shim/gui_mgr.py:341
 msgid "Close"
-msgstr ""
+msgstr "Serriñ"
 
 #: jellyfin_mpv_shim/gui_mgr.py:454
 msgid "Configure Servers"
-msgstr ""
+msgstr "Kefluniañ ar Servijerioù"
 
 #: jellyfin_mpv_shim/gui_mgr.py:455
 msgid "Show Console"
@@ -138,7 +140,7 @@ msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:456
 msgid "Application Menu"
-msgstr ""
+msgstr "Lañser an arload"
 
 #: jellyfin_mpv_shim/gui_mgr.py:457
 msgid "Open Config Folder"
@@ -226,7 +228,7 @@ msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:139 jellyfin_mpv_shim/syncplay.py:634
 msgid "SyncPlay"
-msgstr ""
+msgstr "SyncPlay"
 
 #: jellyfin_mpv_shim/menu.py:145
 msgid "MPV Shim v{0} Release Info/Download"

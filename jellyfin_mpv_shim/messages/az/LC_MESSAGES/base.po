@@ -5,603 +5,588 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-06-05 13:53-0400\n"
-"PO-Revision-Date: 2026-06-20 12:46+0000\n"
-"Last-Translator: Žiga Ules <ziga.ules@gmail.com>\n"
-"Language-Team: Slovenian <https://translate.jellyfin.org/projects/jellyfin/"
-"jellyfin-mpv-shim/sl/>\n"
-"Language: sl\n"
+"POT-Creation-Date: 2024-06-05 13:54-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.15.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:29
 msgid "Selecting Tracks..."
-msgstr "Izbiranje sledi..."
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:105
 msgid "{0}: No Subtitles"
-msgstr "{0}: Ni podnapisov"
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:142
 msgid "{0}: Fail"
-msgstr "{0}: Napaka"
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:146
 msgid "Set Subbed: {0} ok, {1} fail"
-msgstr "Nastavi podnapise: {0} ok, {1} napaka"
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:151
 msgid "Set Dubbed: {0} ok, {1} audio only, {2} fail"
-msgstr "Nastavi sinhronizacijo: {0} ok, {1} samo zvok, {2} napaka"
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:158
 msgid "Manual: {0} ok, {1} fail"
-msgstr "Ročno: {0} ok, {1} napaka"
+msgstr ""
 
 #: jellyfin_mpv_shim/bulk_subtitle.py:163
 msgid "Setting Current..."
-msgstr "Nastavi trenutno ..."
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:75
 msgid "Server URL: "
-msgstr "URL strežnika: "
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:76
 msgid "Username: "
-msgstr "Uporabniško ime: "
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:77
 msgid "Password: "
-msgstr "Geslo: "
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:82
 msgid "Successfully added server."
-msgstr "Strežnik uspešno dodan."
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:83
 msgid "Add another server?"
-msgstr "Dodaj še en strežnik?"
+msgstr ""
 
 #: jellyfin_mpv_shim/clients.py:86
 msgid "Adding server failed."
-msgstr "Napaka pri dodajanju strežnika."
+msgstr ""
 
 #: jellyfin_mpv_shim/display_mirror/__init__.py:116
 msgid "Ready to cast"
-msgstr "Pripravljen za deljenje"
+msgstr ""
 
 #: jellyfin_mpv_shim/display_mirror/__init__.py:118
 msgid "Select your media in Jellyfin and play it here"
-msgstr "Izberite predstavnost v Jellyfin in jo predvajajte tu"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:153
 msgid "Application Log"
-msgstr "Dnevnik aplikacije"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:245 jellyfin_mpv_shim/gui_mgr.py:335
 msgid "Add Server"
-msgstr "Dodaj strežnik"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:246
 msgid ""
 "Could not add server.\n"
 "Please check your connection information."
 msgstr ""
-"Strežnika ni bilo mogoče dodati.\n"
-"Preverite vaše nastavitve povezave."
 
 #: jellyfin_mpv_shim/gui_mgr.py:267
 msgid "Fail"
-msgstr "Napaka"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:267
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:280
 msgid "Server Configuration"
-msgstr "Nastavitve strežnika"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:303
 msgid "Server:"
-msgstr "Strežnik:"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:308
 msgid "Username:"
-msgstr "Uporabniško ime:"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:313
 msgid "Password:"
-msgstr "Geslo:"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:338
 msgid "Remove Server"
-msgstr "Odstrani strežnik"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:341
 msgid "Close"
-msgstr "Zapri"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:454
 msgid "Configure Servers"
-msgstr "Nastavi strežnike"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:455
 msgid "Show Console"
-msgstr "Pokaži konzolo"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:456
 msgid "Application Menu"
-msgstr "Meni aplikacije"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:457
 msgid "Open Config Folder"
-msgstr "Odpri mapo z nastavitvami"
+msgstr ""
 
 #: jellyfin_mpv_shim/gui_mgr.py:458
 msgid "Quit"
-msgstr "Izhod"
+msgstr ""
 
 #: jellyfin_mpv_shim/media.py:139
 msgid " (Transcode)"
-msgstr " (Prekodiranje)"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:28
 msgid "White"
-msgstr "Bela"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:29
 msgid "Yellow"
-msgstr "Rumena"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:30
 msgid "Black"
-msgstr "Črna"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:31
 msgid "Cyan"
-msgstr "cian"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:32
 msgid "Blue"
-msgstr "Modra"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:33
 msgid "Green"
-msgstr "Zelena"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:34
 msgid "Magenta"
-msgstr "Magenta"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:35
 msgid "Red"
-msgstr "Rdeča"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:36
 msgid "Gray"
-msgstr "Siva"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:40
 msgid "Tiny"
-msgstr "Najmanjše"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:41
 msgid "Small"
-msgstr "Majhno"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:42
 msgid "Normal"
-msgstr "Normalno"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:43
 msgid "Large"
-msgstr "Veliko"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:44
 msgid "Huge"
-msgstr "Največje"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:130
 msgid "Main Menu"
-msgstr "Glavni meni"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:136
 msgid "Change Audio"
-msgstr "Spremeni zvok"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:137
 msgid "Change Subtitles"
-msgstr "Spremeni podnapise"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:138
 msgid "Change Video Quality"
-msgstr "Spremeni kvaliteto videa"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:139 jellyfin_mpv_shim/syncplay.py:634
 msgid "SyncPlay"
-msgstr "SyncPlay"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:145
 msgid "MPV Shim v{0} Release Info/Download"
-msgstr "MPV Shim v{0} Informacije o izdaji/Prenos"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:153
 msgid "Change Video Playback Profile"
-msgstr "Spremeni profil predvajanja videa"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:158
 msgid "Auto Set Audio/Subtitles (Entire Series)"
-msgstr "Samodejno nastavi zvok/podnapise (celotna serija)"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:163
 msgid "Quit and Mark Unwatched"
-msgstr "Izhod in označi neogledano"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:166
 msgid "Screenshot"
-msgstr "Posnetek zaslona"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:170
 msgid "Video Playback Profiles"
-msgstr "Profili predvajanja videa"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:173
 msgid "SVP Settings"
-msgstr "Nastavitve SVP"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:177 jellyfin_mpv_shim/menu.py:521
 msgid "Video Preferences"
-msgstr "Nastavitve videa"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:178 jellyfin_mpv_shim/menu.py:544
 msgid "Player Preferences"
-msgstr "Nastavitve predvajalnika"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:179
 msgid "Close Menu"
-msgstr "Zapri meni"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:261
 msgid "Select Audio Track"
-msgstr "Izberi zvokovno sled"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:298
 msgid "Select Subtitle Track"
-msgstr "Izberi sled podnapisov"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:306
 msgid "None"
-msgstr "Nič"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:345
 msgid "Select Transcode Quality"
-msgstr "Izberi kvaliteto prekodiranja"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:346
 msgid "Maximum"
-msgstr "Maksimum"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:346 jellyfin_mpv_shim/menu.py:423
 msgid "No Transcode"
-msgstr "Brez prekodiranja"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:382
 msgid "Select Audio/Subtitle for Series"
-msgstr "Izberi zvok/podnapise za serijo"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:384
 msgid "English Audio"
-msgstr "Angleški zvok"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:386
 msgid "Japanese Audio w/ English Subtitles"
-msgstr "Japonski zvok z angleškimi podnapisi"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:391
 msgid "Manual by Track Index (Less Reliable)"
-msgstr "Ročno po indeksu sledi (manj zanesljivo)"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:421
 msgid "Select Default Transcode Profile"
-msgstr "Izberi privzeti profil za prekodiranje"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:456
 msgid "Select Subtitle Color"
-msgstr "Izberi barvo podnapisov"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:465
 msgid "Select Subtitle Size"
-msgstr "Izberi velikost podnapisov"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:475
 msgid "Select Subtitle Position"
-msgstr "Izberi lokacijo podnapisov"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:477
 msgid "Bottom"
-msgstr "Na dnu"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:478
 msgid "Top"
-msgstr "Na vrhu"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:479
 msgid "Middle"
-msgstr "V sredini"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:486
 msgid "Remote Transcode Quality: {0:0.1f} Mbps"
-msgstr "Kvaliteta prekodiranja: {0:0.1f} Mbps"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:492
 msgid "Subtitle Size: {0}"
-msgstr "Velikost podnapisov: {0}"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:496
 msgid "Subtitle Position: {0}"
-msgstr "Lokacija podnapisov: {0}"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:500
 msgid "Subtitle Color: {0}"
-msgstr "Barva podnapisov: {0}"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:505
 msgid "Transcode Hi10p to 8bit"
-msgstr "Prekodiraj Hi10p v 8bit"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:506
 msgid "Transcode HDR"
-msgstr "Prekodiraj HDR"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:507
 msgid "Direct Paths"
-msgstr "Neposredne poti"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:508
 msgid "Disable Direct Play"
-msgstr "Onemogoči neposredno predvajanje"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:514
 msgid "Video Profile Subtype: {0}"
-msgstr "Podvrsta video profila: {0}"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:525
 msgid "Video Profile Subtype"
-msgstr "Podtip video profila"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:546
 msgid "Auto Play"
-msgstr "Samodejno predvajanje"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:547
 msgid "Auto Fullscreen"
-msgstr "Samodejni celotni zaslon"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:548
 msgid "Media Key Seek"
-msgstr "Iskanje po ključu medija"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:549
 msgid "Use Web Seek Pref"
-msgstr "Uporaba nastavitev spletnega iskanja"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:550
 msgid "Display Mirroring"
-msgstr "Zrcaljenje zaslona"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:551
 msgid "Write Logs to File"
-msgstr "Zapiši dnevnike v datoteko"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:552
 msgid "Check for Updates"
-msgstr "Preveri za posodobitve"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:554
 msgid "Discord Rich Presence"
-msgstr "Uporabi Discord Rich Presence"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:556
 msgid "Always Skip Intros"
-msgstr "Vedno preskoči uvode"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:557
 msgid "Ask to Skip Intros"
-msgstr "Vprašaj za preskok uvoda"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:558
 msgid "Always Skip Credits"
-msgstr "Vedno preskoči končno špico"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:559
 msgid "Ask to Skip Credits"
-msgstr "Vprašaj za preskok končne špice"
+msgstr ""
 
 #: jellyfin_mpv_shim/menu.py:561
 msgid "Enable thumbnail previews"
-msgstr "Omogoči predogledne sličice"
+msgstr ""
 
 #: jellyfin_mpv_shim/player.py:487
 msgid "Skipped Credits"
-msgstr "Končna špica je bila preskočena"
+msgstr ""
 
 #: jellyfin_mpv_shim/player.py:487
 msgid "Skipped Intro"
-msgstr "Uvod je bil preskočen"
+msgstr ""
 
 #: jellyfin_mpv_shim/player.py:490
 msgid "Seek to Skip Credits"
-msgstr "Poišči za preskok končne špice"
+msgstr ""
 
 #: jellyfin_mpv_shim/player.py:490
 msgid "Seek to Skip Intro"
-msgstr "Premik za preskok uvoda"
+msgstr ""
 
 #: jellyfin_mpv_shim/player.py:598
 msgid ""
 "Your remote video is transcoding!\n"
 "Press c to adjust bandwidth settings if this is not needed."
 msgstr ""
-"Video se prekodira!\n"
-"V kolikor to ni potrebno pritisnite c za spreminjanje pasovne širine."
 
 #: jellyfin_mpv_shim/player.py:965
 msgid "Season {0} - Episode {1}"
-msgstr "Sezona {0} - Epizoda {1}"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:45
 #: jellyfin_mpv_shim/svp_integration.py:58
 msgid "Automatic"
-msgstr "Samodejno"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:160
 msgid "Disabled"
-msgstr "Onemogočeno"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:167
 msgid "Select SVP Profile"
-msgstr "Izberi SVP profil"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:171
 msgid "SVP is Not Active"
-msgstr "SVP ni aktiven"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:173
 msgid "Disable"
-msgstr "Onemogoči"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:174
 msgid "Retry"
-msgstr "Poskusi znova"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:180
 msgid "Enable SVP"
-msgstr "Omogoči SVP"
+msgstr ""
 
 #: jellyfin_mpv_shim/svp_integration.py:180
 msgid "SVP is Disabled"
-msgstr "SVP je onemogočen"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:21
 msgid "The specified SyncPlay group does not exist."
-msgstr "Izbrana SyncPlay skupina ne obstaja."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:22
 msgid "Creating SyncPlay groups is not allowed."
-msgstr "Ustvarjanje SyncPlay skupin ni dovoljeno."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:23
 msgid "SyncPlay group access was denied."
-msgstr "Dostop do SyncPlay skupine zavrnjen."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:24
 msgid "Access to the SyncPlay library was denied."
-msgstr "Dostop do SyncPlay knjižnice je bil zavrnjen."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:150
 msgid "SpeedToSync (x{0})"
-msgstr "Hitrost sinhronizacije (x{0})"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:161
 msgid "Sync Disabled (Too Many Attempts)"
-msgstr "Sinhronizacija onemogočena (Preveč poskusov)"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:169
 msgid "SkipToSync (x{0})"
-msgstr "Preskoči na sinhronizacijo (x{0})"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:230
 msgid "SyncPlay enabled."
-msgstr "SyncPlay omogočen."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:250
 msgid "SyncPlay disabled."
-msgstr "SyncPlay onemogočen."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:313
 msgid "{0} has joined."
-msgstr "{0} se je pridružil."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:315
 msgid "{0} has left."
-msgstr "{0} je odšel."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:317
 msgid "{0} is buffering."
-msgstr "Medpomnjenje {0}."
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:615
 msgid "{0}'s Group"
-msgstr "{0} skupina"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:624 jellyfin_mpv_shim/video_profile.py:190
 msgid "None (Disabled)"
-msgstr "Brez (Onemogočeno)"
+msgstr ""
 
 #: jellyfin_mpv_shim/syncplay.py:628
 msgid "New Group"
-msgstr "Nova skupina"
+msgstr ""
 
 #: jellyfin_mpv_shim/update_check.py:67
 msgid ""
 "MPV Shim v{0} Update Available\n"
 "Open menu (press c) for details."
 msgstr ""
-"MPV Shim v{0} Posodobitev je na voljo\n"
-"Odpri meni (pritisni c) za podrobnosti."
 
 #: jellyfin_mpv_shim/utils.py:307
 msgid "Unkn"
-msgstr "Neznano"
+msgstr ""
 
 #: jellyfin_mpv_shim/utils.py:308
 msgid " Forced"
-msgstr " Prisiljeno"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:18
 msgid "Generic (FSRCNNX)"
-msgstr "Splošno (FSRCNNX)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:19
 msgid "Generic High (FSRCNNX x16)"
-msgstr "Splošno Visoko (FSRCNNX x16)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:20
 msgid "Anime4K x4 Faithful (For SD)"
-msgstr "Anime4K x4 Faithful (Za SD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:21
 msgid "Anime4K x4 Perceptual (For SD)"
-msgstr "Anime4K x4 Perceptual (Za SD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:22
 msgid "Anime4K x4 Perceptual + Deblur (For SD)"
-msgstr "Anime4K x4 Perceptual + Deblur (Za SD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:25
 msgid "Anime4K x2 Faithful (For HD)"
-msgstr "Anime4K x2 Faithful (Za HD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:26
 msgid "Anime4K x2 Perceptual (For HD)"
-msgstr "Anime4K x2 Perceptual (Za HD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:27
 msgid "Anime4K x2 Perceptual + Deblur (For HD)"
-msgstr "Anime4K x2 Perceptual + Deblur (Za HD)"
+msgstr ""
 
 #: jellyfin_mpv_shim/video_profile.py:204
 msgid "Select Shader Profile"
-msgstr "Izberi profil senčenja"
-
-#~ msgid "Use JellyScrub thumbnails"
-#~ msgstr "Uporabi JellyScrub predogled"
-
-#~ msgid "Transcode H265 to H264"
-#~ msgstr "Prekodiraj H265 v H264"
+msgstr ""
